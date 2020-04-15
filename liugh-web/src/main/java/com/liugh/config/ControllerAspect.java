@@ -28,6 +28,7 @@ public class ControllerAspect {
     public void aspect() {
     }
 
+    //自定义注解 切面 装饰方法 做对应的处理
     @Around(value = "aspect()")
     public Object validationPoint(ProceedingJoinPoint pjp)throws Throwable{
         Method method = currentMethod(pjp,pjp.getSignature().getName());
